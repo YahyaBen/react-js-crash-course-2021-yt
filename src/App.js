@@ -2,6 +2,7 @@ import './style/style.css';
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import Tasks from './components/Tasks';
+import AddTask from './components/AddTask';
 import { useState } from 'react'
 function App() {
   const name = 'Yahya'
@@ -50,6 +51,7 @@ const ToggleReminder = (id) => {
       onDelete={deleteTask}
       onToggle={ToggleReminder}
       />
+      <AddTask />
       <Navbar />
     </div>
 
