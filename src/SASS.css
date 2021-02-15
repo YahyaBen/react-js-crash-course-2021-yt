@@ -1,0 +1,69 @@
+div {
+  text-align: center;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+div header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: v;
+      -ms-flex-pack: v;
+          justify-content: v;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+div header img {
+  height: 40vmin;
+  pointer-events: none;
+  -webkit-animation: App-logo-spin infinite 20s linear;
+          animation: App-logo-spin infinite 20s linear;
+}
+
+div link {
+  color: #61dafb;
+}
+
+p {
+  color: red;
+}
+
+p code {
+  color: Green;
+}
+
+p code a {
+  color: Yellow;
+}
+/*# sourceMappingURL=SASS.css.map */
