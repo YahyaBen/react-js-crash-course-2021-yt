@@ -30,7 +30,15 @@ function App() {
 )
 // Delete task
 const deleteTask = (id) => {
-  console.log('delete',id)
+  // console.log(id)
+  setTasks(tasks.filter((task)=> task.id !==id))
+}
+
+// Toggle reminder
+const ToggleReminder = (id) => {
+  // console.log(id)
+  setTasks(
+    tasks.map((task)=> task.id === id ? {...task,reminder: !task.reminder} : task))
 }
   return (
     <div className="container">
@@ -40,6 +48,7 @@ const deleteTask = (id) => {
       <Header test='Yahya'/>
       <Tasks tasks={tasks}
       onDelete={deleteTask}
+      onToggle={ToggleReminder}
       />
       <Navbar />
     </div>
