@@ -1,10 +1,11 @@
-import './style/style.css';
+import './index.css';
 import Header from './components/Header'
-import Navbar from './components/Navbar'
 import Tasks from './components/Tasks';
+import Task from './components/Task';
 import AddTask from './components/AddTask';
 import { useState } from 'react'
 function App() {
+  const [showAddTask,setShowAddTask]=useState(false)
   const name = 'Yahya'
   const X = false
   const [tasks, setTasks] = useState(
@@ -29,6 +30,16 @@ function App() {
         },
     ]
 )
+
+// Add task
+const addTask = (task) => {
+  // console.log(id)
+  //console.log(task)
+  const id = Math.floor(Math.random()*99)
+  const newTask={id,...task}
+  setTasks([...tasks, newTask])
+}
+
 // Delete task
 const deleteTask = (id) => {
   // console.log(id)
@@ -44,15 +55,14 @@ const ToggleReminder = (id) => {
   return (
     <div className="container">
       
-      <h1> Hello </h1>
-      <h2> hello {name} is {X? 'Yes' : 'No'}</h2>
-      <Header test='Yahya'/>
+      {/* <h1> Hello </h1>
+      <h2> hello {name} is {X? 'Yes' : 'No'}</h2> */}
+      <Header test='Task'/>
       <Tasks tasks={tasks}
       onDelete={deleteTask}
       onToggle={ToggleReminder}
       />
-      <AddTask />
-      <Navbar />
+      {showAddTask && <AddTask onAdd={addTask} />}
     </div>
 
   );

@@ -7,12 +7,12 @@ const Header = ({test}) => {
     }
 
     return (
-        <header className='header' style={{color : 'red', background:'yellow'}}>
-        <h1>Teste {test}</h1>
-        <Button color='green' text='Hello' onClick={onClick} />
-        <Button color='blue' text='Hey'/>
+        <header className='header' >
+        <h1>Add new {test}</h1>
+        <Button color='green' text='Add' onClick={onClick} />
+        {/* <Button color='blue' text='Hey'/>
         <Button color='red' text='Mamamya'/>
-        <Button />
+        <Button /> */}
         </header>
     )
 }
